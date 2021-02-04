@@ -2,7 +2,7 @@
 #define OPENCV_CVCONFIG_H_INCLUDED
 
 /* OpenCV compiled as static or dynamic libs */
-#define BUILD_SHARED_LIBS
+/* #undef BUILD_SHARED_LIBS */
 
 /* OpenCV intrinsics optimized code */
 #define CV_ENABLE_INTRINSICS
@@ -12,9 +12,6 @@
 
 /* Compile for 'real' NVIDIA GPU architectures */
 #define CUDA_ARCH_BIN ""
-
-/* Create PTX or BIN for 1.0 compute capability */
-/* #undef CUDA_ARCH_BIN_OR_PTX_10 */
 
 /* NVIDIA GPU features are used */
 #define CUDA_ARCH_FEATURES ""
@@ -54,7 +51,7 @@
 /* #undef HAVE_D3D9 */
 
 /* Eigen Matrix & Linear Algebra Library */
-#define HAVE_EIGEN
+/* #undef HAVE_EIGEN */
 
 /* Geospatial Data Abstraction Library */
 /* #undef HAVE_GDAL */
@@ -63,7 +60,7 @@
 #define HAVE_GTHREAD
 
 /* GTK+ 2.x toolkit */
-#define HAVE_GTK
+/* #undef HAVE_GTK */
 
 /* Halide support */
 /* #undef HAVE_HALIDE */

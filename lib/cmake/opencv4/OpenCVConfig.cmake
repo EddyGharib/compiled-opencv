@@ -29,7 +29,7 @@
 #      - OpenCV_VERSION_MAJOR            : Major version part of OpenCV_VERSION: "4"
 #      - OpenCV_VERSION_MINOR            : Minor version part of OpenCV_VERSION: "4"
 #      - OpenCV_VERSION_PATCH            : Patch version part of OpenCV_VERSION: "0"
-#      - OpenCV_VERSION_STATUS           : Development status of this build: "-pre"
+#      - OpenCV_VERSION_STATUS           : Development status of this build: ""
 #
 #    Advanced variables:
 #      - OpenCV_SHARED                   : Use OpenCV as shared library
@@ -50,7 +50,7 @@ SET(OpenCV_VERSION_MAJOR  4)
 SET(OpenCV_VERSION_MINOR  4)
 SET(OpenCV_VERSION_PATCH  0)
 SET(OpenCV_VERSION_TWEAK  0)
-SET(OpenCV_VERSION_STATUS "-pre")
+SET(OpenCV_VERSION_STATUS "")
 
 include(FindPackageHandleStandardArgs)
 
@@ -96,11 +96,18 @@ endif()
 
 
 
+if(NOT TARGET ippicv)
+  add_library(ippicv STATIC IMPORTED)
+  set_target_properties(ippicv PROPERTIES
+    IMPORTED_LINK_INTERFACE_LIBRARIES ""
+    IMPORTED_LOCATION "${OpenCV_INSTALL_PATH}/lib/opencv4/3rdparty/libippicv.a"
+  )
+endif()
 
 
 
 # Some additional settings are required if OpenCV is built as static libs
-set(OpenCV_SHARED ON)
+set(OpenCV_SHARED OFF)
 
 # Enables mangled install paths, that help with side by side installs
 set(OpenCV_USE_MANGLED_PATHS FALSE)
