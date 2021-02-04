@@ -15,16 +15,6 @@ set_target_properties(libwebp PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS libwebp )
 list(APPEND _IMPORT_CHECK_FILES_FOR_libwebp "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/liblibwebp.a" )
 
-# Import target "ippiw" for configuration "Release"
-set_property(TARGET ippiw APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(ippiw PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/libippiw.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ippiw )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ippiw "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/libippiw.a" )
-
 # Import target "libprotobuf" for configuration "Release"
 set_property(TARGET libprotobuf APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(libprotobuf PROPERTIES
