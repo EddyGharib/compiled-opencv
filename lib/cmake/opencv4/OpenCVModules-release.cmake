@@ -15,16 +15,6 @@ set_target_properties(libwebp PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS libwebp )
 list(APPEND _IMPORT_CHECK_FILES_FOR_libwebp "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/liblibwebp.a" )
 
-# Import target "libjasper" for configuration "Release"
-set_property(TARGET libjasper APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(libjasper PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/liblibjasper.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS libjasper )
-list(APPEND _IMPORT_CHECK_FILES_FOR_libjasper "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/liblibjasper.a" )
-
 # Import target "ippiw" for configuration "Release"
 set_property(TARGET ippiw APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(ippiw PROPERTIES

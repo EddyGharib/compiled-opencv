@@ -51,7 +51,7 @@
 /* #undef HAVE_D3D9 */
 
 /* Eigen Matrix & Linear Algebra Library */
-/* #undef HAVE_EIGEN */
+#define HAVE_EIGEN
 
 /* Geospatial Data Abstraction Library */
 /* #undef HAVE_GDAL */
@@ -60,7 +60,7 @@
 #define HAVE_GTHREAD
 
 /* GTK+ 2.x toolkit */
-/* #undef HAVE_GTK */
+#define HAVE_GTK
 
 /* Halide support */
 /* #undef HAVE_HALIDE */
@@ -78,8 +78,8 @@
 #define HAVE_IPP_IW_LL
 
 /* JPEG-2000 codec */
-/* #undef HAVE_OPENJPEG */
-#define HAVE_JASPER
+#define HAVE_OPENJPEG
+/* #undef HAVE_JASPER */
 
 /* IJG JPEG codec */
 #define HAVE_JPEG
