@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget libwebp ippiw libprotobuf quirc ittnotify ade ocv.3rdparty.ffmpeg ocv.3rdparty.gstreamer ocv.3rdparty.v4l ocv.3rdparty.dc1394_2 opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_dnn opencv_features2d opencv_imgcodecs opencv_videoio opencv_calib3d opencv_highgui opencv_objdetect opencv_stitching opencv_video opencv_gapi)
+foreach(_expectedTarget libwebp ippiw libprotobuf quirc ade ocv.3rdparty.ffmpeg ocv.3rdparty.gstreamer ocv.3rdparty.v4l ocv.3rdparty.dc1394_2 opencv_core opencv_flann opencv_imgproc opencv_ml opencv_photo opencv_dnn opencv_features2d opencv_imgcodecs opencv_videoio opencv_calib3d opencv_highgui opencv_objdetect opencv_stitching opencv_video opencv_gapi)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -61,13 +61,6 @@ add_library(libprotobuf STATIC IMPORTED)
 
 # Create imported target quirc
 add_library(quirc STATIC IMPORTED)
-
-# Create imported target ittnotify
-add_library(ittnotify STATIC IMPORTED)
-
-set_target_properties(ittnotify PROPERTIES
-  INTERFACE_LINK_LIBRARIES "dl"
-)
 
 # Create imported target ade
 add_library(ade STATIC IMPORTED)
@@ -115,7 +108,7 @@ set_target_properties(ocv.3rdparty.dc1394_2 PROPERTIES
 add_library(opencv_core STATIC IMPORTED)
 
 set_target_properties(opencv_core PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:pthread>;\$<LINK_ONLY:rt>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>;\$<LINK_ONLY:Eigen3::Eigen>;/usr/lib/x86_64-linux-gnu/libz.so;\$<LINK_ONLY:ittnotify>"
+  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:pthread>;\$<LINK_ONLY:rt>;\$<LINK_ONLY:ippiw>;\$<LINK_ONLY:ippicv>;\$<LINK_ONLY:Eigen3::Eigen>;/usr/lib/x86_64-linux-gnu/libz.so"
 )
 
 # Create imported target opencv_flann

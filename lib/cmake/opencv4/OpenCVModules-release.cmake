@@ -45,16 +45,6 @@ set_target_properties(quirc PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS quirc )
 list(APPEND _IMPORT_CHECK_FILES_FOR_quirc "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/libquirc.a" )
 
-# Import target "ittnotify" for configuration "Release"
-set_property(TARGET ittnotify APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(ittnotify PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/libittnotify.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ittnotify )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ittnotify "${_IMPORT_PREFIX}/lib/opencv4/3rdparty/libittnotify.a" )
-
 # Import target "ade" for configuration "Release"
 set_property(TARGET ade APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(ade PROPERTIES
