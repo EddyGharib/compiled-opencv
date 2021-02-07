@@ -29,7 +29,7 @@
 #      - OpenCV_VERSION_MAJOR            : Major version part of OpenCV_VERSION: "4"
 #      - OpenCV_VERSION_MINOR            : Minor version part of OpenCV_VERSION: "4"
 #      - OpenCV_VERSION_PATCH            : Patch version part of OpenCV_VERSION: "0"
-#      - OpenCV_VERSION_STATUS           : Development status of this build: "-pre"
+#      - OpenCV_VERSION_STATUS           : Development status of this build: ""
 #
 #    Advanced variables:
 #      - OpenCV_SHARED                   : Use OpenCV as shared library
@@ -50,7 +50,7 @@ SET(OpenCV_VERSION_MAJOR  4)
 SET(OpenCV_VERSION_MINOR  4)
 SET(OpenCV_VERSION_PATCH  0)
 SET(OpenCV_VERSION_TWEAK  0)
-SET(OpenCV_VERSION_STATUS "-pre")
+SET(OpenCV_VERSION_STATUS "")
 
 include(FindPackageHandleStandardArgs)
 

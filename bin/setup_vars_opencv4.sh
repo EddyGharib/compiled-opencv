@@ -2,11 +2,11 @@
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
-[[ ! "${OPENCV_QUIET}" ]] && ( echo "Setting vars for OpenCV 4.4.0-pre" )
+[[ ! "${OPENCV_QUIET}" ]] && ( echo "Setting vars for OpenCV 4.4.0" )
 export LD_LIBRARY_PATH="$SCRIPT_DIR/../lib:$LD_LIBRARY_PATH"
 
 if [[ ! "$OPENCV_SKIP_PYTHON" ]]; then
-  PYTHONPATH_OPENCV="$SCRIPT_DIR/../lib/python3.6/dist-packages"
+  PYTHONPATH_OPENCV="$SCRIPT_DIR/python_loader_is_not_installed"
   [[ ! "${OPENCV_QUIET}" ]] && ( echo "Append PYTHONPATH: ${PYTHONPATH_OPENCV}" )
   export PYTHONPATH="${PYTHONPATH_OPENCV}:$PYTHONPATH"
 fi
